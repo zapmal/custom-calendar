@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-    entry: "./src/scripts/calendar.js",
+    entry: "./src/scripts/Calendar.js",
     output: {
         path: path.resolve(__dirname, "./build"),
         filename: "bundle.js" 

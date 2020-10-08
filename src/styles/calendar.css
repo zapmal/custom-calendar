@@ -86,6 +86,16 @@ li {
   color: var(--grey-300);
 }
 
+.calendar-day--today {
+  padding-top: 4px;
+}
+
+.calendar-day--today > span {
+  color: #fff;
+  border-radius: 9999px;
+  background-color: var(--grey-800);
+}
+
 .calendar-day > span {
   display: flex;
   justify-content: center;
