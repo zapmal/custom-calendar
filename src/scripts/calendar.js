@@ -15,10 +15,7 @@ const daysOfWeek = document.getElementById("days-of-week");
 const INITIAL_MONTH = dayjs().format("M");
 const INITIAL_YEAR = dayjs().format("YYYY");
 
-let selectedMonth = dayjs(new Date(INITIAL_YEAR, INITIAL_MONTH - 1, 1));
 let currentMonthDays;
-let previousMonthDays;
-let nextMonthDays;
 
 WEEKDAYS.forEach(weekday => {
     const weekdayElement = document.createElement("li");
@@ -49,6 +46,28 @@ function renderCalendar(year = INITIAL_YEAR, month = INITIAL_MONTH) {
     days.forEach(day => appendDay(day, calendarDaysElement));
 }
 
+function initMonthSelector() {
+    let selectedMonth = dayjs(new Date(INITIAL_YEAR, INITIAL_MONTH - 1, 1));
+
+    const previousMonthSelector = document.getElementById("previous-month-selector");
+    previousMonthSelector.addEventListener("click", () => {
+        selectedMonth = dayjs(selectedMonth).subtract(1, "month");
+        renderCalendar(selectedMonth.format("YYYY"), selectedMonth.format("M"));
+    });
+
+    const presentMonthSelector = document.getElementById("present-month-selector");
+    presentMonthSelector.addEventListener("click", () => {
+        selectedMonth = dayjs(new Date(INITIAL_YEAR, INITIAL_MONTH - 1, 1));
+        renderCalendar(selectedMonth.format("YYYY"), selectedMonth.format("M"));
+    });
+
+    const nextMonthSelector = document.getElementById("next-month-selector");
+    nextMonthSelector.addEventListener("click", () => {
+        selectedMonth = dayjs(selectedMonth).add(1, "month");
+        renderCalendar(selectedMonth.format("YYYY"), selectedMonth.format("M"));
+    });
+}
+
 function appendDay(day, calendarDaysElement) {
     const dayElement = document.createElement("li");
     const dayElementClassList = dayElement.classList;
@@ -72,26 +91,6 @@ function removeAllDayElements(calendarDaysElement) {
         first.remove();
         first = calendarDaysElement.firstElementChild;
     }
-}
-
-function initMonthSelector() {
-    const previousMonthSelector = document.getElementById("previous-month-selector");
-    previousMonthSelector.addEventListener("click", () => {
-        selectedMonth = dayjs(selectedMonth).subtract(1, "month");
-        renderCalendar(selectedMonth.format("YYYY"), selectedMonth.format("M"));
-    });
-
-    const presentMonthSelector = document.getElementById("present-month-selector");
-    presentMonthSelector.addEventListener("click", () => {
-        selectedMonth = dayjs(new Date(INITIAL_YEAR, INITIAL_MONTH - 1, 1));
-        renderCalendar(selectedMonth.format("YYYY"), selectedMonth.format("M"));
-    });
-
-    const nextMonthSelector = document.getElementById("next-month-selector");
-    nextMonthSelector.addEventListener("click", () => {
-        selectedMonth = dayjs(selectedMonth).add(1, "month");
-        renderCalendar(selectedMonth.format("YYYY"), selectedMonth.format("M"));
-    });
 }
 
 function getNumberOfDaysInMonth(year, month) {
