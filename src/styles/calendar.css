@@ -12,7 +12,7 @@ body {
 
 .header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .header h2 {
@@ -27,7 +27,7 @@ body {
 
 .container {
   margin: auto;
-  width: 50%;
+  width: 90%;
 }
 
 ol,
@@ -53,6 +53,7 @@ li {
 .calendar-month-header-selected-month {
   font-size: 24px;
   font-weight: 600;
+  letter-spacing: 3px;
 }
 
 .calendar-month-header-selectors {
@@ -125,4 +126,15 @@ li {
   right: 2px;
   width: var(--day-label-size);
   height: var(--day-label-size);
+}
+
+@media all and (max-width: 800px) {
+
+  /* #days-of-week li {
+    font-size: 0;
+  }
+  
+  #days-of-week > li abbr:after {
+    content: attr(title);
+  } */
 }
