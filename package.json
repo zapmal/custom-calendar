@@ -4,7 +4,7 @@
   "description": "",
   "main": "matrix.js",
   "scripts": {
-    "start-dev": "npx webpack-dev-server",
+    "serve": "npx webpack-dev-server",
     "compile-prod": "npx webpack -p",
     "compile-dev": "npx webpack -d"
   },

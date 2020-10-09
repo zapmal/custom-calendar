@@ -5,8 +5,29 @@ body {
   --grey-200: #cfd7e3;
   --grey-300: #b5c0cd;
   --grey-800: #3e4e63;
+  --black: #000000;
   --grid-gap: 1px;
   --day-label-size: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h2 {
+  color: var(--grey-800);
+  letter-spacing: 5px;
+}
+
+.header .info {
+  color: var(--grey-800);
+  opacity: 0.8;
+}
+
+.container {
+  margin: auto;
+  width: 50%;
 }
 
 ol,
