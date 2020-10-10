@@ -110,6 +110,7 @@ li {
 
 .calendar-day--today {
   padding-top: 4px;
+  border: 1px solid var(--grey-800);
 }
 
 .calendar-day--today > span {
@@ -133,6 +134,9 @@ li {
   .calendar-day {
     min-height: 80px;
   }
+
+  /* This is to change the weekday, for example MON -> M */
+  
   /* #days-of-week li {
     font-size: 0;
   }
