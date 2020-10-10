@@ -51,19 +51,18 @@ function initMonthSelector() {
 
     document.addEventListener("keydown", e => {
         if (e.code === "ArrowLeft") {
-            selectedMonth = handleMonthChange("prev", selectedMonth);
+            selectedMonth = dayjs(selectedMonth).subtract(1, "month");
             renderCalendar(selectedMonth.format("YYYY"), selectedMonth.format("M"));
         } 
         if (e.code === "ArrowRight") {
-            selectedMonth = handleMonthChange("next", selectedMonth);
+            selectedMonth = dayjs(selectedMonth).add(1, "month");
             renderCalendar(selectedMonth.format("YYYY"), selectedMonth.format("M"));
         }
-        // console.log(e.code);
     });
 
     const previousMonthSelector = document.getElementById("previous-month-selector");
     previousMonthSelector.addEventListener("click", () => {
-        selectedMonth = handleMonthChange("prev", selectedMonth);
+        selectedMonth = dayjs(selectedMonth).subtract(1, "month");
         renderCalendar(selectedMonth.format("YYYY"), selectedMonth.format("M"));
     });
 
@@ -75,17 +74,9 @@ function initMonthSelector() {
 
     const nextMonthSelector = document.getElementById("next-month-selector");
     nextMonthSelector.addEventListener("click", () => {
-        selectedMonth = handleMonthChange("next", selectedMonth);
+        selectedMonth = dayjs(selectedMonth).add(1, "month");
         renderCalendar(selectedMonth.format("YYYY"), selectedMonth.format("M"));
     });
-}
-
-function handleMonthChange(direction, selectedMonth) {
-    if (direction === "prev") {
-        return dayjs(selectedMonth).subtract(1, "month");
-    } else if (direction === "next") {
-        return dayjs(selectedMonth).add(1, "month");
-    }
 }
 
 function appendDay(day, calendarDaysElement) {
