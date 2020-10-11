@@ -6,6 +6,7 @@ body {
   --grey-300: #b5c0cd;
   --grey-800: #3e4e63;
   --black: #000000;
+  --white: #FFFFFF;
   --grid-gap: 1px;
   --day-label-size: 20px;
 }
@@ -60,11 +61,36 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 80px;
+  width: 170px;
 }
 
 .calendar-month-header-selectors > * {
   cursor: pointer;
+}
+
+#present-month-selector {
+  margin: 0 6px 0 6px;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.5em 1em;
+  border: 0.1em solid var(--black);
+  border-radius: 0.15em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 300;
+  color: var(--black);
+  text-align: center;
+  background-color: var(--white);
+  outline: none;
+  transition: all 0.2s;
+}
+
+.button:hover {
+  border: 0.1em solid var(--grey-300);
+  color: var(--white);
+  background-color: var(--grey-800);
 }
 
 .day-of-week {
@@ -130,6 +156,10 @@ li {
 }
 
 @media all and (max-width: 700px) {
+
+  .calendar-month-header-selected-month {
+    font-size: 16px;
+  }
 
   .calendar-day {
     min-height: 80px;
