@@ -11,6 +11,7 @@
    - `npm run serve` to start development server.
    - `npm run compile-prod` to compile in production mode.
    - `npm run compile-dev` to compile in development mode.
+   - Go on and check localhost:5000 now.
    
    
 Did it with the goal of integrating it in other app, that's why the header says something like "should be easy to 
