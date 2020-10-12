@@ -167,8 +167,13 @@ li {
     font-size: 14px;
   }
 
+  .calendar-month-header-selected-month {
+    font-size: 1em;
+    margin-top: 0.8em;
+  }
+
   .calendar-day {
-    min-height: 80px;
+    min-height: 5rem;
   }
 
   /* This is to change the weekday, for example MON -> M */
