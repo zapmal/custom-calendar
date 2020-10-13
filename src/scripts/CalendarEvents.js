@@ -8,8 +8,8 @@ const closeModalBox = document.querySelector(".close");
 function handleDayClick() {
 
     calendarDays.addEventListener("click", displayModalBox);
-
     closeModalBox.addEventListener("click", () => modalBox.style.display="none");
+
     window.addEventListener("click", e => {
         if (e.target === modalBox) {
             modalBox.style.display = "none";
@@ -21,7 +21,10 @@ function displayModalBox(e) {
     if (e.target.classList.contains("calendar-day--not-current")) return;
         
     modalBox.style.display = "block";
-    modalBoxContent.textContent = `Day #${e.target.textContent}`;
+    // modalBoxContent.textContent = `Day #${e.target.textContent}`;
+    // const eventFlag = e.target.querySelector(".event-flag");
+
+    // eventFlag.classList.toggle("event-active");
 }
 
 export { handleDayClick };

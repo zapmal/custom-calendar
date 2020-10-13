@@ -83,17 +83,24 @@ function initMonthSelector() {
 
 function appendDay(day, calendarDaysElement) {
     const dayElement = document.createElement("li");
+    dayElement.dataset.id = day.date;
     const dayElementClassList = dayElement.classList;
 
     dayElementClassList.add("calendar-day");
     const dayOfMonthElement = document.createElement("span");
     dayOfMonthElement.innerText = day.dayOfMonth;
 
+    const eventFlag = document.createElement("abbr");
+    eventFlag.classList.add("event-flag");
+    eventFlag.title = "There are Events this day";
+    eventFlag.textContent = "EV";
+
     if (day.date === TODAY) dayElementClassList.add("calendar-day--today");
 
     if (!day.isCurrentMonth) dayElementClassList.add("calendar-day--not-current");
 
     dayElement.appendChild(dayOfMonthElement);
+    dayElement.appendChild(eventFlag);
     calendarDaysElement.appendChild(dayElement);
 }
 
