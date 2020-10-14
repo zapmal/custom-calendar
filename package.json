@@ -6,7 +6,7 @@
   "scripts": {
     "serve": "webpack-dev-server",
     "c:prod": "webpack -p",
-    "c:dev": "npx webpack -d"
+    "c:dev": "webpack -d"
   },
   "keywords": [
     "js",
