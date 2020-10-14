@@ -4,9 +4,9 @@
   "description": "",
   "main": "matrix.js",
   "scripts": {
-    "serve": "npx webpack-dev-server",
-    "compile-prod": "npx webpack -p",
-    "compile-dev": "npx webpack -d"
+    "serve": "webpack-dev-server",
+    "c:prod": "webpack -p",
+    "c:dev": "npx webpack -d"
   },
   "keywords": [
     "js",
@@ -18,7 +18,7 @@
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^4.3.0",
-    "dayjs": "^1.9.1",
+    "dayjs": "^1.9.3",
     "html-webpack-plugin": "^4.5.0",
     "mini-css-extract-plugin": "^0.12.0",
     "style-loader": "^1.3.0",
