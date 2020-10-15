@@ -37,30 +37,80 @@
     border-radius: 5%;
 }
 
-.label {
-    font-size: 1.125rem;
-    font-weight: 500;
-    line-height: 1;
-    margin: 1.5rem 0.2rem 0 2rem;
-    letter-spacing: 1px;
+/* New style */
+.input-field {
+    position: relative;
+    width: 250px;
+    height: 44px;
+    line-height: 44px;
+    margin-left: 2rem;
+}
+
+.label-i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: black;
+    transition: 180ms all ease-in;
+    cursor: text;
 }
 
 .input {
-    font-size: max(16px, 1em);
-    font-family: inherit;
-    padding: 0.25rem 0.5rem;
-    margin: 1rem 2rem 0 2rem;
-    background-color: #fff;
-    border: 2px solid var(--input-border);
-    border-radius: 4px;
-    transition: 180ms box-shadow ease-in-out;
-}
-
-.input textarea {
-    padding: 0.5em 0.5em;
+    width: 91%;
+    border: 0;
+    outline: 0;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid var(--input-border);
+    box-shadow: none;
+    color: #111;
 }
 
 .input:focus {
+    box-shadow: 0 4px 2px -2px  
+    hsla(
+        var(--input-focus-h),
+        var(--input-focus-s),
+        var(--input-focus-l),
+        0.8
+    );
+    
+}
+
+.input:focus ~ .label-i {
+    top: -20px;
+}
+
+.block-level {
+    display: block;
+}
+
+textarea {
+    resize: none;
+}
+
+.label {
+    font-weight: 500;
+    line-height: 1;
+    margin: 1.5rem 0.2rem 0 2rem;
+    position: absolute;
+    top: 146px;
+    transition: 180ms all ease-in;
+}
+
+.textarea {
+    font-family: inherit;
+    padding: 0.5em 0.5em;
+    margin: 2.5rem 2rem 0 2rem;
+    background-color: #fff;
+    border: 2px solid var(--input-border);
+    border-radius: 4px;
+    width: 14.3rem;
+    height: 8rem;
+    transition: 180ms all ease-in;
+}
+
+.textarea:focus {
     box-shadow: 0 0 0 2px
       hsla(
         var(--input-focus-h),
@@ -70,17 +120,8 @@
       );
 }
 
-.block-level-label {
-    display: block;
-}
-
-.description-content {
-    width: 14.3rem;
-    height: 8rem;
-}
-
-textarea.input {
-    resize: none;
+.textarea:focus ~ .label {
+    top: 133px;
 }
 
 .close::before {

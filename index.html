@@ -47,11 +47,13 @@
         <div class="modal-content">
             <span class="close"></span>
             
-            <label class="label block-level-label" for="title-input">Title </label>
-            <input type="text" name="title" class="input" id="title-input" placeholder="Add the title here">
-     
-            <label for="description-input" class="label block-level-label">Description</label>
-            <textarea placeholder="Add a more detailed description..."name="description" id="description-input" class="description-content input"></textarea>
+            <div class="input-field">
+                <input type="text" id="title" class="input">
+                <label for="title" class="label-i">Title</label>
+            </div>
+
+            <textarea name="description" id="description" class="textarea description-content"></textarea>
+            <label for="description" class="label block-level">Description</label>
         </div>
     </div>
 </body>
