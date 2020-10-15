@@ -5,9 +5,9 @@
    - branch `ts-calendar` **will** contain the TypeScript version.
 
 - ### Installation
-   - Clone the repository using `git clone https://github.com/Zondazx/custom-calendar`
-   - Proceed to enter in the directory `cd custom-calendar`
-   - Run on command line `npm install` or `yarn install`
+   - Clone the repository:  `git clone https://github.com/Zondazx/custom-calendar`
+   - Enter in the directory: `cd custom-calendar`
+   - Run: `npm install` | `yarn install`
 
 - ### Scripts
    - To start dev-server: `yarn serve` | `npm run serve`
