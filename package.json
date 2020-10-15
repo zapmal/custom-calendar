@@ -5,8 +5,8 @@
   "main": "matrix.js",
   "scripts": {
     "serve": "webpack serve",
-    "c:prod": "webpack -p",
-    "c:dev": "webpack -d"
+    "c:prod": "webpack --mode=production",
+    "c:dev": "webpack --mode=development"
   },
   "keywords": [
     "js",
@@ -19,9 +19,11 @@
   "devDependencies": {
     "css-loader": "5.0.0",
     "dayjs": "^1.9.3",
+    "file-loader": "^6.1.1",
     "html-webpack-plugin": "^4.5.0",
     "mini-css-extract-plugin": "1.0.0",
     "style-loader": "2.0.0",
+    "url-loader": "^4.1.1",
     "webpack": "5.1.0",
     "webpack-cli": "4.0.0",
     "webpack-dev-server": "^3.11.0"

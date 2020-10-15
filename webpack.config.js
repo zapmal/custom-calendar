@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
+    mode: "development",
     entry: "./src/scripts/Calendar.js",
     output: {
         path: path.resolve(__dirname, "./build"),
@@ -19,6 +20,21 @@ module.exports = {
                     { loader: MiniCssExtractPlugin.loader },
                     { loader: "css-loader" }
                 ]
+            }, 
+            {
+                test: /\.(png|jpg|gif)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[path][name].[ext]',
+                            context: path.resolve(__dirname, "images/"),
+                            outputPath: 'images/',
+                            publicPath: 'images/',
+                            useRelativePaths: true
+                        }
+                    }
+                ] 
             }
         ]
     },

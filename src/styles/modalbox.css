@@ -27,7 +27,7 @@
 }
 
 .modal-content {
-    width: 31.25rem;
+    width: 24.25rem;
     max-width: 100%;
     height: 25rem;
     max-height: 100%;
@@ -85,28 +85,32 @@
     display: block;
 }
 
-textarea {
-    resize: none;
+.image {
+    position: relative;
+    bottom: 8.1rem;
+    right: 19.5rem;
 }
 
 .label {
     font-weight: 500;
     line-height: 1;
-    margin: 1.5rem 0.2rem 0 2rem;
+    margin: 1.5rem 0.2rem 0 4rem;
     position: absolute;
-    top: 9.1rem;
+    top: 8.9rem;
     transition: 180ms all ease-in;
 }
 
 .textarea {
+    resize: none;
     font-family: inherit;
     padding: 0.5em 0.5em;
     margin: 2.5rem 2rem 0 2rem;
     background-color: #fff;
     border: 2px solid var(--input-border);
     border-radius: 4px;
-    width: 14.3rem;
+    width: 17.3rem;
     height: 8rem;
+    background-color: #f4f7fa;
     transition: 180ms all ease-in;
 }
 
@@ -121,7 +125,7 @@ textarea {
 }
 
 .textarea:focus ~ .label {
-    top: 8.3rem;
+    letter-spacing: 1px;
 }
 
 .close::before {
@@ -130,7 +134,7 @@ textarea {
     color: #aaaaaa;
     position: relative;
     top: 0.5em;
-    left: 20.4em;
+    left: 15.4em;
     padding: 5px 12px 8px 12px;
     width: 1.8em;
     height: 1.8em;
@@ -151,6 +155,17 @@ textarea {
         width: 21rem;
     }
 
+    .image {
+        right: 16.7rem;
+    }
+
+    .label {
+        top: 9.1rem;
+    }
+
+    .textarea {
+        width: 14.3rem;
+    }
     .textarea:focus ~ .label {
         top: 8.6rem;
     }
