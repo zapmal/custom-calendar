@@ -150,6 +150,10 @@ textarea {
     .modal-content {
         width: 21rem;
     }
+
+    .input {
+        width: 80%;
+    }
     
     .close::before {
         left: 11em;
