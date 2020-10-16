@@ -79,6 +79,11 @@
     
 }
 
+/* Used to leave the text on the top when it has text (content). */
+.has-content {
+    top: -1.25rem;
+}
+
 .input:focus ~ .label-i {
     top: -1.25rem;
 }
@@ -128,9 +133,9 @@
       );
 }
 
-.textarea:focus ~ .label {
+/* .textarea:focus ~ .label-description {
     letter-spacing: 0.8px;
-}
+} */
 
 .image-duedate {
     width: 26px;
@@ -166,7 +171,10 @@
       var(--input-focus-l),
       0.8
     );
-    
+}
+
+.input-duedate:focus ~ .label-description {
+    letter-spacing: 0.8px;
 }
 
 .close::before {
