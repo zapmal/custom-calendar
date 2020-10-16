@@ -137,6 +137,10 @@
     letter-spacing: 0.8px;
 } */
 
+.duedate-container {
+    margin-top: 0.3rem;
+}
+
 .image-duedate {
     width: 26px;
     height: 26px;
@@ -161,7 +165,6 @@
     outline: none;
     transition: 180ms box-shadow ease-in;
 }
-
 
 .input-duedate:focus {
     box-shadow: 0 0 0 2px
@@ -189,6 +192,11 @@
     height: 1.8em;
     text-align: center;
     transition: all 420ms ease-out;
+}
+
+.save-btn {
+    margin: 2rem 0 0 8.8rem;
+    padding: 0.5rem 1.8rem;
 }
 
 .close:hover::before,

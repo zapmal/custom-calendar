@@ -1,8 +1,8 @@
 {
-  "name": "calendar-matrix",
+  "name": "calendar",
   "version": "1.0.0",
   "description": "",
-  "main": "matrix.js",
+  "main": "src/scripts/Calendar.js",
   "scripts": {
     "serve": "webpack serve",
     "c:prod": "webpack --mode=production",
