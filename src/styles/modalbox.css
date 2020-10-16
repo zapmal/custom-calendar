@@ -1,3 +1,5 @@
+/* TODO: FIX REPEATED CLASSES. */
+
 :root {
     --input-border: #8b8a8b;
     --input-focus-h: 214;
@@ -85,13 +87,13 @@
     display: block;
 }
 
-.image {
+.image-description {
     position: relative;
     bottom: 8.1rem;
     right: 19.5rem;
 }
 
-.label {
+.label-description {
     font-weight: 500;
     line-height: 1;
     margin: 1.5rem 0.2rem 0 4rem;
@@ -103,6 +105,7 @@
 .textarea {
     resize: none;
     font-family: inherit;
+    font-size: max(16px, 1em);
     padding: 0.5em 0.5em;
     margin: 2.5rem 2rem 0 2rem;
     background-color: #fff;
@@ -125,7 +128,31 @@
 }
 
 .textarea:focus ~ .label {
-    letter-spacing: 1px;
+    letter-spacing: 0.8px;
+}
+
+.image-duedate {
+    width: 26px;
+    height: 26px;
+    position: relative;
+    bottom: -0.5rem;
+    left: 2.1rem;
+}
+
+.label-duedate {
+    position: relative;
+    left: 2.1rem;
+}
+
+.input-duedate {
+    font-size: max(16px, 1em);
+    font-family: inherit;
+    padding: 0.25em 0.5em;
+    margin: 0.7rem 0 0 2.5rem;
+    background-color: #fff;
+    border: 2px solid var(--input-border);
+    border-radius: 4px;
+    transition: 180ms box-shadow ease-in-out;
 }
 
 .close::before {
@@ -155,11 +182,11 @@
         width: 21rem;
     }
 
-    .image {
+    .image-description {
         right: 16.7rem;
     }
 
-    .label {
+    .label-description {
         top: 9.1rem;
     }
 
@@ -170,6 +197,18 @@
         top: 8.6rem;
     }
     
+    .input-duedate {
+        margin: 0.7rem 0 0 2rem;
+    }
+
+    .label-duedate {
+        left: 1.8rem;
+    }
+
+    .image-duedate {
+        left: 1.9rem;
+    }
+
     .close::before {
         left: 11em;
     }
