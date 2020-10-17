@@ -114,7 +114,7 @@
     display: block;
 }
 
-.description-input {
+.input-description {
     resize: none;
     font-family: inherit;
     font-size: max(16px, 1em);
@@ -130,7 +130,7 @@
     transition: 180ms all ease-in;
 }
 
-.description-input:focus {
+.input-description:focus {
     box-shadow: 0 0 0 2px
       hsla(
         var(--input-focus-h),
@@ -217,7 +217,7 @@
         left: 11em;
     }
 
-    .description-input {
+    .input-description {
         width: 14.3rem;
     }
 
@@ -229,7 +229,7 @@
         top: 9.1rem;
     }
 
-    /* .description-input:focus ~ .label-description {
+    /* input-description:focus ~ .label-description {
         top: 8.6rem;
     } */
     
