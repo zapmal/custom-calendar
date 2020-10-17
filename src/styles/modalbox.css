@@ -39,8 +39,29 @@
     border-radius: 5%;
 }
 
-/* New style */
-.input-field {
+
+.close::before {
+    content: "x";
+    font-size: 22px;
+    color: #aaaaaa;
+    position: relative;
+    top: 0.5em;
+    left: 15.4em;
+    padding: 5px 12px 8px 12px;
+    width: 1.8em;
+    height: 1.8em;
+    text-align: center;
+    transition: all 420ms ease-out;
+}
+
+.close:hover::before,
+.close:focus::before {
+    background-color: rgba(9,30,66,.08);
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.title-container {
     position: relative;
     width: 15.6rem;
     height: 2.7rem;
@@ -48,17 +69,7 @@
     margin-left: 2rem;
 }
 
-.label-i {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    color: black;
-    transition: 180ms all ease-in;
-    cursor: text;
-}
-
-.input {
+.input-title {
     width: 91%;
     border: 0;
     outline: 0;
@@ -68,7 +79,7 @@
     color: #111;
 }
 
-.input:focus {
+.input-title:focus {
     box-shadow: 0 4px 2px -2px  
     hsla(
         var(--input-focus-h),
@@ -79,12 +90,23 @@
     
 }
 
-/* Used to leave the text on the top when it has text (content). */
-.has-content {
+.input-title:focus ~ .label-title {
     top: -1.25rem;
 }
 
-.input:focus ~ .label-i {
+.label-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: black;
+    transition: 180ms all ease-in;
+    cursor: text;
+}
+
+/* Utility classes. */
+/* Used to leave the text on the top when it has text (content). */
+.has-content {
     top: -1.25rem;
 }
 
@@ -92,22 +114,7 @@
     display: block;
 }
 
-.image-description {
-    position: relative;
-    bottom: 8.1rem;
-    right: 19.5rem;
-}
-
-.label-description {
-    font-weight: 500;
-    line-height: 1;
-    margin: 1.5rem 0.2rem 0 4rem;
-    position: absolute;
-    top: 8.9rem;
-    transition: 180ms all ease-in;
-}
-
-.textarea {
+.description-input {
     resize: none;
     font-family: inherit;
     font-size: max(16px, 1em);
@@ -123,7 +130,7 @@
     transition: 180ms all ease-in;
 }
 
-.textarea:focus {
+.description-input:focus {
     box-shadow: 0 0 0 2px
       hsla(
         var(--input-focus-h),
@@ -131,6 +138,21 @@
         var(--input-focus-l),
         0.8
       );
+}
+
+.image-description {
+    position: relative;
+    bottom: 8.1rem;
+    right: 19.5rem;
+}
+
+.label-description {
+    font-weight: 500;
+    line-height: 1;
+    margin: 1.5rem 0.2rem 0 4rem;
+    position: absolute;
+    top: 8.9rem;
+    transition: 180ms all ease-in;
 }
 
 /* .textarea:focus ~ .label-description {
@@ -176,40 +198,27 @@
     );
 }
 
-.input-duedate:focus ~ .label-description {
-    letter-spacing: 0.8px;
-}
-
-.close::before {
-    content: "x";
-    font-size: 22px;
-    color: #aaaaaa;
-    position: relative;
-    top: 0.5em;
-    left: 15.4em;
-    padding: 5px 12px 8px 12px;
-    width: 1.8em;
-    height: 1.8em;
-    text-align: center;
-    transition: all 420ms ease-out;
-}
-
 .save-btn {
     margin: 2rem 0 0 8.5rem;
     padding: 0.5rem 1.8rem;
 }
 
-.close:hover::before,
-.close:focus::before {
-    background-color: rgba(9,30,66,.08);
-    border-radius: 100%;
-    cursor: pointer;
-}
+/* .input-duedate:focus ~ .label-duedate {
+    letter-spacing: 0.8px;
+} */
 
 @media all and (max-width: 37.5rem) {
     
     .modal-content {
         width: 21rem;
+    }
+
+    .close::before {
+        left: 11em;
+    }
+
+    .description-input {
+        width: 14.3rem;
     }
 
     .image-description {
@@ -220,32 +229,25 @@
         top: 9.1rem;
     }
 
-    .textarea {
-        width: 14.3rem;
-    }
-    .textarea:focus ~ .label {
+    /* .description-input:focus ~ .label-description {
         top: 8.6rem;
-    }
+    } */
     
-    .input-duedate {
-        margin: 0.7rem 0 0 2rem;
-        width: 45%;
-        font-size: 15px;
+    .image-duedate {
+        left: 1.9rem;
     }
 
     .label-duedate {
         left: 1.8rem;
     }
 
-    .image-duedate {
-        left: 1.9rem;
+    .input-duedate {
+        margin: 0.7rem 0 0 2rem;
+        width: 45%;
+        font-size: 15px;
     }
 
     .save-btn {
         margin: 2rem 0 0 6.8rem;
-    }
-
-    .close::before {
-        left: 11em;
     }
 }
