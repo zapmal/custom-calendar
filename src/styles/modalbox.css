@@ -195,7 +195,7 @@
 }
 
 .save-btn {
-    margin: 2rem 0 0 8.8rem;
+    margin: 2rem 0 0 8.5rem;
     padding: 0.5rem 1.8rem;
 }
 
@@ -229,6 +229,8 @@
     
     .input-duedate {
         margin: 0.7rem 0 0 2rem;
+        width: 45%;
+        font-size: 15px;
     }
 
     .label-duedate {
@@ -237,6 +239,10 @@
 
     .image-duedate {
         left: 1.9rem;
+    }
+
+    .save-btn {
+        margin: 2rem 0 0 6.8rem;
     }
 
     .close::before {
