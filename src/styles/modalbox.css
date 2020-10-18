@@ -73,7 +73,7 @@
     width: 91%;
     border: 0;
     outline: 0;
-    padding: 0.5rem 0;
+    padding: 0.35rem 0;
     border-bottom: 2px solid var(--input-border);
     box-shadow: none;
     color: #111;
@@ -100,7 +100,7 @@
     left: 0;
     width: 100%;
     color: black;
-    transition: 180ms all ease-in;
+    transition: 120ms all ease-in;
     cursor: text;
 }
 
