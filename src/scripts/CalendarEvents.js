@@ -12,8 +12,7 @@ const titleLabel = modalBoxContent.querySelector(".label-title");
 const description = modalBoxContent.querySelector(".input-description");
 const duedate = modalBoxContent.querySelector(".input-duedate");
 
-// const events = JSON.parse(localStorage.getItem("events")) || []
-const events = [];
+const events = JSON.parse(localStorage.getItem("events")) || [];
 let selectedDay;
 
 function saveEvent(e) {
@@ -24,7 +23,9 @@ function saveEvent(e) {
         duedate: duedate.value
     }
 
-    console.log(eventData);
+    events.push(eventData);
+    localStorage.setItem("events", JSON.stringify(events));
+    console.log(events);
 }
 
 function handleDayClick() {

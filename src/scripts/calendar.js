@@ -46,6 +46,17 @@ function renderCalendar(year = INITIAL_YEAR, month = INITIAL_MONTH) {
     const days = [...previousMonthDays, ...currentMonthDays, ...nextMonthDays];
     
     days.forEach(day => appendDay(day, calendarDaysElement));
+    
+    // could be better, honestly.
+    const storedEvents = getStoredEvents();
+    storedEvents.forEach(e => {
+        days.forEach(day => {
+            if (e === day.date) {
+                console.log("yupi");
+                console.log(day.date);
+            }
+        });
+    });
 }
 
 function initMonthSelector() {
@@ -159,6 +170,14 @@ function createDaysForNextMonth(year, month) {
             isCurrentMonth: false
         };
     });
+}
+
+function getStoredEvents() {
+    const events = JSON.parse(localStorage.getItem("events")) || [];
+    let data = [];
+    events.forEach(e => data.push(dayjs(e.id).format("YYYY-MM-DD")));
+    
+    return data;
 }
 
 function getWeekday(date) {
