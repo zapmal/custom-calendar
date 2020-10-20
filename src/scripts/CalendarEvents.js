@@ -78,12 +78,14 @@ function handleDayClick() {
     saveButton.addEventListener("click", saveEvent);
 
     // At the moment only the icon is being deleted
-    deleteButton.addEventListener("click", e => {
+    deleteButton.addEventListener("click", () => {
         [...calendarDays.children].forEach(day => {
             let current = day.dataset.id;
             if (current === selectedDay) {
                 selectedDayElement.lastChild.classList.remove("event-active");
-                // the modalbox should be hidden after the data being deleted 
+                const remainingEvents = events.filter(e => e.id !== current);
+                localStorage.setItem("events", JSON.stringify(remainingEvents));
+                modalBox.style.display = "none";
             }
         });
     });
