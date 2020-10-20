@@ -47,16 +47,23 @@ function renderCalendar(year = INITIAL_YEAR, month = INITIAL_MONTH) {
     
     days.forEach(day => appendDay(day, calendarDaysElement));
     
-    // could be better, honestly.
+    // Events
     const storedEvents = getStoredEvents();
-    storedEvents.forEach(e => {
-        days.forEach(day => {
-            if (e === day.date) {
-                console.log("yupi");
-                console.log(day.date);
+    const renderedDays = [...document.querySelectorAll(".calendar-day")];
+
+    renderedDays.forEach(day => {
+        if (day.classList.contains("calendar-day--not-current")) return;
+        let currentDay = day.dataset.id;
+
+        storedEvents.forEach(event => {
+            if (event === currentDay) {
+                const eventFlag = day.querySelector(".event-flag");
+                eventFlag.classList.add("event-active");
             }
         });
+        // console.log(currentDay);
     });
+    
 }
 
 function initMonthSelector() {
@@ -95,20 +102,19 @@ function initMonthSelector() {
 function appendDay(day, calendarDaysElement) {
     const dayElement = document.createElement("li");
     dayElement.dataset.id = day.date;
-    const dayElementClassList = dayElement.classList;
 
-    dayElementClassList.add("calendar-day");
+    dayElement.classList.add("calendar-day");
     const dayOfMonthElement = document.createElement("span");
     dayOfMonthElement.innerText = day.dayOfMonth;
 
     const eventFlag = document.createElement("abbr");
     eventFlag.classList.add("event-flag");
-    eventFlag.title = "There are Events this day";
-    eventFlag.textContent = "EV";
+    eventFlag.title = "This means that there's an event this day, click for more details!";
+    eventFlag.textContent = "E";
 
-    if (day.date === TODAY) dayElementClassList.add("calendar-day--today");
+    if (day.date === TODAY) dayElement.classList.add("calendar-day--today");
 
-    if (!day.isCurrentMonth) dayElementClassList.add("calendar-day--not-current");
+    if (!day.isCurrentMonth) dayElement.classList.add("calendar-day--not-current");
 
     dayElement.appendChild(dayOfMonthElement);
     dayElement.appendChild(eventFlag);
@@ -172,6 +178,7 @@ function createDaysForNextMonth(year, month) {
     });
 }
 
+// map it
 function getStoredEvents() {
     const events = JSON.parse(localStorage.getItem("events")) || [];
     let data = [];

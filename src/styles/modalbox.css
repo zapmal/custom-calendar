@@ -203,6 +203,12 @@
     padding: 0.5rem 1.8rem;
 }
 
+.delete-btn {
+    display: none;
+    margin: 0;
+    padding: 0.5rem 1rem;
+}
+
 /* .input-duedate:focus ~ .label-duedate {
     letter-spacing: 0.8px;
 } */
