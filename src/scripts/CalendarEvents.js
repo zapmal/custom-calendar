@@ -53,6 +53,7 @@ function cleanEventData() {
 */
 function saveEvent(e) {
     const filteredEvents = events.filter(e => e.id !== selectedDay);
+    const eventFlag = selectedDayElement.lastChild;
     const eventData = {
         id: selectedDay,
         title: title.value,
@@ -68,6 +69,8 @@ function saveEvent(e) {
         events.push(eventData);
         console.log(events);
     }
+    
+    eventFlag.classList.add("event-active");
     localStorage.setItem("events", JSON.stringify(events));
 }
 

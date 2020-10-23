@@ -61,7 +61,6 @@ function renderCalendar(year = INITIAL_YEAR, month = INITIAL_MONTH) {
                 eventFlag.classList.add("event-active");
             }
         });
-        // console.log(currentDay);
     });
     
 }
@@ -178,12 +177,10 @@ function createDaysForNextMonth(year, month) {
     });
 }
 
-// map it
 function getStoredEvents() {
     const events = JSON.parse(localStorage.getItem("events")) || [];
-    let data = [];
-    events.forEach(e => data.push(dayjs(e.id).format("YYYY-MM-DD")));
-    
+    const data = events.map(e => dayjs(e.id).format("YYYY-MM-DD"));
+
     return data;
 }
 
