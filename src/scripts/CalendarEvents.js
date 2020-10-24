@@ -74,18 +74,13 @@ function saveEvent(e) {
     localStorage.setItem("events", JSON.stringify(events));
 }
 
-function deleteEvent(e) {
-    [...calendarDays.children].forEach(day => {
-        let currentDay = day.dataset.id;
-        if (currentDay === selectedDay) {
-            const eventFlag = selectedDayElement.lastChild;
-            eventFlag.classList.remove("event-active");
-            const remainingEvents = events.filter(e => e.id !== currentDay);
-            localStorage.setItem("events", JSON.stringify(remainingEvents));
+function deleteEvent() {
+    const eventFlag = selectedDayElement.lastChild;
+    eventFlag.classList.remove("event-active");
+    events = events.filter(e => e.id !== selectedDay);
 
-            modalBox.style.display = "none";
-        }
-    });
+    localStorage.setItem("events", JSON.stringify(events));
+    modalBox.style.display = "none";
 }
 
 function handleDayClick() {
