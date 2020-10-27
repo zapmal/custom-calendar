@@ -91,12 +91,23 @@ li {
   background-color: var(--white);
   outline: none;
   transition: all 0.4s;
+  cursor: pointer;
 }
 
 .button:hover {
   border: 0.1rem solid var(--grey-200);
   color: var(--white);
   background-color: var(--grey-800);
+}
+
+.disabled-button {
+  cursor: default;
+  color: var(--grey-300);
+}
+
+.disabled-button:hover {
+  color: var(--grey-300);
+  background-color: var(--white);
 }
 
 .day-of-week {
@@ -162,10 +173,6 @@ li {
   height: var(--day-label-size);
 }
 
-/*
-* This event- classes are for displaying / hiding the event-flag.
-* Basically an indicator to know if a given day has an event.
-*/
 .event-flag {
   display: none;
 }
@@ -181,6 +188,19 @@ li {
   background-color: rgb(98, 173, 98);
   padding: 0.25rem 0.50rem; 
 }
+
+.error {
+  opacity: 0;
+  margin: 1rem 0 0 4rem;
+  color: red;
+  transition: opacity 1s ease-in;
+}
+
+.display-error {
+  opacity: 1;
+}
+
+
 
 @media all and (max-width: 37.5rem) {
 

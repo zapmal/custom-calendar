@@ -104,16 +104,6 @@
     cursor: text;
 }
 
-/* Utility classes. */
-/* Used to leave the text on the top when it has text (content). */
-.has-content {
-    top: -1.25rem;
-}
-
-.block-level {
-    display: block;
-}
-
 .input-description {
     resize: none;
     font-family: inherit;
@@ -198,8 +188,13 @@
     );
 }
 
+#active-duedate {
+    vertical-align: middle;
+    outline: none;
+}
+
 .save-btn {
-    margin: 2rem 0 0 8.5rem;
+    margin: 1rem 0 0 8.5rem;
     padding: 0.5rem 1.8rem;
 }
 
@@ -208,6 +203,24 @@
     margin: 0;
     padding: 0.5rem 1rem;
 }
+
+/* Utility classes. */
+.has-content {
+    top: -1.25rem;
+}
+
+.block-level {
+    display: block;
+}
+
+/* 
+ * Used to align both buttons in desktop. 
+ * In mobile .save-btn overrides this margin and aligns it.
+*/
+.align-btns {
+    margin: 1rem 0 0 4.5rem;
+}
+
 
 /* .input-duedate:focus ~ .label-duedate {
     letter-spacing: 0.8px;
@@ -248,12 +261,23 @@
     }
 
     .input-duedate {
-        margin: 0.7rem 0 0 2rem;
+        margin: 0.7rem 0 0 1.9rem;
         width: 45%;
         font-size: 15px;
     }
 
+    .error {
+        margin: 1rem 0 0 2.5rem;
+    }
+
     .save-btn {
-        margin: 2rem 0 0 6.8rem;
+        margin: 0.5rem 0 0 2.5rem;
+    }
+
+    /* Utility Classes */
+
+    /* This one is used to align the button when it's alone. */
+    .align-save-btn {
+        margin: 1rem 0 0 7rem;
     }
 }

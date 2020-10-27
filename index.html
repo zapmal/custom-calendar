@@ -17,7 +17,6 @@
 
     <div class="container">
         <div id="app">
-            <!-- This can be added from the calendar.js like: applicationContainer.innerText = this. -->
             <div class="calendar-month">
                 <section class="calendar-month-header">
                     <div id="selected-month" class="calendar-month-header-selected-month">
@@ -45,9 +44,6 @@
     </div>
 
     <!-- Event Input -->
-    <!-- Updated border colors such as for an error state -->
-    <!-- Add to .input style="--input-border: #ff3c41; --input-focus-h: 358; --input-focus-s: 100%; --input-focus-l: 26%;" -->
-
     <div class="modal">
         <div class="modal-content">
             <span class="close"></span>
@@ -68,13 +64,19 @@
                     <img src="images/time-48.png" alt="due date" class="image-duedate">
                     <label for="duedate" class="label-duedate">Due date</label>
                     <input type="date" name="duedate" id="duedate" class="input-duedate">
+
+                    <input type="checkbox" name="active-duedate" id="active-duedate">
                 </div>
             </form>
 
-            <button class="button save-btn">Save</button>
+            <p class="error">The title can't be blank, enter one.</p>
+
+            <button class="button save-btn align-save-btn">Save</button>
             <button class="button delete-btn">Delete Event</button>
         </div>
     </div>
+
+    <div id="example">HEY</div>
 </body>
 
 </html>
