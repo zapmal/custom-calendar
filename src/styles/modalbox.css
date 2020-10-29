@@ -28,7 +28,7 @@
     background-color: rgb(0,0,0,0.4);
 }
 
-.modal-content {
+.modal__content {
     width: 24.25rem;
     max-width: 100%;
     height: 25rem;
@@ -40,7 +40,7 @@
 }
 
 
-.close::before {
+.button__close::before {
     content: "x";
     font-size: 22px;
     color: #aaaaaa;
@@ -54,14 +54,14 @@
     transition: all 420ms ease-out;
 }
 
-.close:hover::before,
-.close:focus::before {
+.button__close:hover::before,
+.button__close:focus::before {
     background-color: rgba(9,30,66,.08);
     border-radius: 100%;
     cursor: pointer;
 }
 
-.title-container {
+.title {
     position: relative;
     width: 15.6rem;
     height: 2.7rem;
@@ -69,7 +69,7 @@
     margin-left: 2rem;
 }
 
-.input-title {
+.title__input {
     width: 91%;
     border: 0;
     outline: 0;
@@ -79,7 +79,7 @@
     color: #111;
 }
 
-.input-title:focus {
+.title__input:focus {
     box-shadow: 0 4px 2px -2px  
     hsla(
         var(--input-focus-h),
@@ -90,11 +90,11 @@
     
 }
 
-.input-title:focus ~ .label-title {
+.title__input:focus ~ .title__label {
     top: -1.25rem;
 }
 
-.label-title {
+.title__label {
     position: absolute;
     top: 0;
     left: 0;
@@ -104,7 +104,7 @@
     cursor: text;
 }
 
-.input-description {
+.description__input {
     resize: none;
     font-family: inherit;
     font-size: max(16px, 1em);
@@ -120,7 +120,7 @@
     transition: 180ms all ease-in;
 }
 
-.input-description:focus {
+.description__input:focus {
     box-shadow: 0 0 0 2px
       hsla(
         var(--input-focus-h),
@@ -130,13 +130,13 @@
       );
 }
 
-.image-description {
+.description__icon {
     position: relative;
     bottom: 8.1rem;
     right: 19.5rem;
 }
 
-.label-description {
+.description__label {
     font-weight: 500;
     line-height: 1;
     margin: 1.5rem 0.2rem 0 4rem;
@@ -145,15 +145,15 @@
     transition: 180ms all ease-in;
 }
 
-/* .textarea:focus ~ .label-description {
+/* .textarea:focus ~ .description__label {
     letter-spacing: 0.8px;
 } */
 
-.duedate-container {
+.duedate {
     margin-top: 0.3rem;
 }
 
-.image-duedate {
+.duedate__icon {
     width: 26px;
     height: 26px;
     position: relative;
@@ -161,12 +161,12 @@
     left: 2.1rem;
 }
 
-.label-duedate {
+.duedate__label {
     position: relative;
     left: 2.1rem;
 }
 
-.input-duedate {
+.duedate__input {
     font-size: max(16px, 1em);
     font-family: inherit;
     padding: 0.25em 0.5em;
@@ -178,7 +178,7 @@
     transition: 180ms box-shadow ease-in;
 }
 
-.input-duedate:focus {
+.duedate__input:focus {
     box-shadow: 0 0 0 2px
     hsla(
       var(--input-focus-h),
@@ -188,17 +188,17 @@
     );
 }
 
-#active-duedate {
+#duedate__checkbox {
     vertical-align: middle;
     outline: none;
 }
 
-.save-btn {
+.button__save {
     margin: 1rem 0 0 8.5rem;
     padding: 0.5rem 1.8rem;
 }
 
-.delete-btn {
+.button__delete {
     display: none;
     margin: 0;
     padding: 0.5rem 1rem;
@@ -209,58 +209,58 @@
     top: -1.25rem;
 }
 
-.block-level {
+.u-block-level {
     display: block;
 }
 
 /* 
  * Used to align both buttons in desktop. 
- * In mobile .save-btn overrides this margin and aligns it.
+ * In mobile .button__save overrides this margin and aligns it.
 */
 .align-btns {
     margin: 1rem 0 0 4.5rem;
 }
 
 
-/* .input-duedate:focus ~ .label-duedate {
+/* .duedate__input:focus ~ .duedate__label {
     letter-spacing: 0.8px;
 } */
 
 @media all and (max-width: 37.5rem) {
     
-    .modal-content {
+    .modal__content {
         width: 21rem;
     }
 
-    .close::before {
+    .button__close::before {
         left: 11em;
     }
 
-    .input-description {
+    .description__input {
         width: 14.3rem;
     }
 
-    .image-description {
+    .description__icon {
         right: 16.7rem;
     }
 
-    .label-description {
+    .description__label {
         top: 9.1rem;
     }
 
-    /* input-description:focus ~ .label-description {
+    /* description__input:focus ~ .description__label {
         top: 8.6rem;
     } */
     
-    .image-duedate {
+    .duedate__icon {
         left: 1.9rem;
     }
 
-    .label-duedate {
+    .duedate__label {
         left: 1.8rem;
     }
 
-    .input-duedate {
+    .duedate__input {
         margin: 0.7rem 0 0 1.9rem;
         width: 45%;
         font-size: 15px;
@@ -270,14 +270,14 @@
         margin: 1rem 0 0 2.5rem;
     }
 
-    .save-btn {
+    .button__save {
         margin: 0.5rem 0 0 2.5rem;
     }
 
     /* Utility Classes */
 
     /* This one is used to align the button when it's alone. */
-    .align-save-btn {
+    .button__save-align {
         margin: 1rem 0 0 7rem;
     }
 }

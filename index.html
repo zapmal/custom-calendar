@@ -45,38 +45,38 @@
 
     <!-- Event Input -->
     <div class="modal">
-        <div class="modal-content">
-            <span class="close"></span>
+        <div class="modal__content">
+            <span class="button__close"></span>
 
             <form action="/">
-                <div class="title-container">
-                    <input type="text" id="title" class="input-title">
-                    <label for="title" class="label-title">Title</label>
+                <div class="title">
+                    <input type="text" id="title" class="title__input">
+                    <label for="title" class="title__label">Title</label>
                 </div>
 
-                <div class="description-container">
-                    <textarea name="description" id="description" class="input-description"></textarea>
-                    <img src="images/title-24.png" alt="description" class="image-description">
-                    <label for="description" class="label-description block-level">Description</label>
+                <div class="description">
+                    <textarea name="description" id="description" class="description__input"></textarea>
+                    <img src="images/title-24.png" alt="description" class="description__icon">
+                    <label for="description" class="description__label u-block-level">Description</label>
                 </div>
 
-                <div class="duedate-container">
-                    <img src="images/time-48.png" alt="due date" class="image-duedate">
-                    <label for="duedate" class="label-duedate">Due date</label>
-                    <input type="date" name="duedate" id="duedate" class="input-duedate">
+                <div class="duedate">
+                    <img src="images/time-48.png" alt="due date" class="duedate__icon">
+                    <label for="duedate" class="duedate__label">Due date</label>
+                    <input type="date" name="duedate" id="duedate" class="duedate__input">
 
-                    <input type="checkbox" name="active-duedate" id="active-duedate">
+                    <input type="checkbox" name="duedate__checkbox" id="duedate__checkbox">
                 </div>
             </form>
 
             <p class="error">The title can't be blank, enter one.</p>
 
-            <button class="button save-btn align-save-btn">Save</button>
-            <button class="button delete-btn">Delete Event</button>
+            <button class="button button__save button__save-align">Save</button>
+            <button class="button button__delete">Delete Event</button>
         </div>
     </div>
 
-    <div id="example">HEY</div>
+    <div id="growl">HEY</div>
 </body>
 
 </html>

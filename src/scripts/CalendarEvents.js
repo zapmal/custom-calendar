@@ -4,17 +4,17 @@ import dayjs from "dayjs";
 
 const calendarDays = document.getElementById("calendar-days");
 const modalBox = document.querySelector(".modal");
-const closeModalBox = document.querySelector(".close");
+const buttonClose = document.querySelector(".button__close");
 
-const title = document.querySelector(".input-title");
-const titleLabel = document.querySelector(".label-title");
-const description = document.querySelector(".input-description");
-const duedate = document.querySelector(".input-duedate");
-const saveButton = document.querySelector(".save-btn");
-const deleteButton = document.querySelector(".delete-btn");
+const title = document.querySelector(".title__input");
+const titleLabel = document.querySelector(".title__label");
+const description = document.querySelector(".description__input");
+const duedate = document.querySelector(".duedate__input");
+const saveButton = document.querySelector(".button__save");
+const deleteButton = document.querySelector(".button__delete");
 const errorMessage = document.querySelector(".error");
 
-const activeDuedate = document.getElementById("active-duedate");
+const activeDuedate = document.getElementById("duedate__checkbox");
 
 /**
  * TODO: 
@@ -55,7 +55,7 @@ function handleDayClick() {
     });
     saveButton.addEventListener("click", saveEvent);
     deleteButton.addEventListener("click", deleteEvent);
-    closeModalBox.addEventListener("click", () => modalBox.style.display = "none");;
+    buttonClose.addEventListener("click", () => modalBox.style.display = "none");;
 }
 
 function displayEventData(day) {
@@ -68,7 +68,7 @@ function displayEventData(day) {
             titleLabel.classList.add("has-content");
             saveButton.textContent = "Update";
         
-            saveButton.classList.remove("align-save-btn");
+            saveButton.classList.remove("button__save-align");
             saveButton.classList.add("align-btns");
             deleteButton.style.display = "inline-block";
         }
@@ -84,7 +84,7 @@ function cleanEventData() {
     saveButton.textContent = "Save";
 
     saveButton.classList.remove("align-btns");
-    saveButton.classList.add("align-save-btn");
+    saveButton.classList.add("button__save-align");
     deleteButton.style.display = "none";
     modalBox.style.display = "none";
 }
