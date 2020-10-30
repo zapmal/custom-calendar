@@ -18,8 +18,7 @@ const activeDuedate = document.getElementById("duedate__checkbox");
 
 /**
  * TODO: 
- * - Stop using global reference ?
- * - Validating the title (if its set) only with HTML ?
+ * - Stop using global reference 
  */
 let events = JSON.parse(localStorage.getItem("events")) || [];
 let selectedDay;
@@ -126,10 +125,8 @@ function saveEvent(e) {
         if (events.length > filteredEvents.length) {
             filteredEvents.push(eventData);
             events = filteredEvents;
-            console.log(filteredEvents);
         } else {
             events.push(eventData);
-            console.log(events);
         }
 
         eventFlag.classList.add("event-active");
