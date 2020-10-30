@@ -1,5 +1,3 @@
-/* TODO: FIX REPEATED CLASSES. */
-
 :root {
     --input-border: #8b8a8b;
     --input-focus-h: 214;
@@ -11,14 +9,14 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .modal {
     display: none;
     position: fixed;
     z-index: 1;
-    /* padding: 2rem; */
+    padding: 2rem;
     padding-top: 5rem;
     left: 0;
     top: 0;
@@ -137,6 +135,7 @@
 }
 
 .description__label {
+    display: block;
     font-weight: 500;
     line-height: 1;
     margin: 1.5rem 0.2rem 0 4rem;
@@ -209,10 +208,6 @@
     top: -1.25rem;
 }
 
-.u-block-level {
-    display: block;
-}
-
 /* 
  * Used to align both buttons in desktop. 
  * In mobile .button__save overrides this margin and aligns it.
@@ -220,11 +215,6 @@
 .align-btns {
     margin: 1rem 0 0 4.5rem;
 }
-
-
-/* .duedate__input:focus ~ .duedate__label {
-    letter-spacing: 0.8px;
-} */
 
 @media all and (max-width: 37.5rem) {
     
