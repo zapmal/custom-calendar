@@ -1,147 +1,134 @@
 :root {
-    --input-border: #8b8a8b;
-    --input-focus-h: 214;
-    --input-focus-s: 37%;
-    --input-focus-l: 75%;   
-    --grey-300: #b5c0cd;
+  --input-border: #8b8a8b;
+  --input-focus-h: 214;
+  --input-focus-s: 37%;
+  --input-focus-l: 75%;
+  --grey-300: #b5c0cd;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding: 2rem;
-    padding-top: 5rem;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0,0.4);
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding: 2rem;
+  padding-top: 5rem;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0, 0.4);
 }
 
 .modal__content {
-    width: 24.25rem;
-    max-width: 100%;
-    height: 25rem;
-    max-height: 100%;
-    background-color: #fefefe;
-    margin: auto;
-    border: 3px solid var(--grey-300);
-    border-radius: 5%;
+  width: 24.25rem;
+  max-width: 100%;
+  height: 25rem;
+  max-height: 100%;
+  background-color: #fefefe;
+  margin: auto;
+  border: 3px solid var(--grey-300);
+  border-radius: 2%;
 }
 
-
 .button__close::before {
-    content: "x";
-    font-size: 22px;
-    color: #aaaaaa;
-    position: relative;
-    top: 0.5em;
-    left: 15.4em;
-    padding: 5px 12px 8px 12px;
-    width: 1.8em;
-    height: 1.8em;
-    text-align: center;
-    transition: all 420ms ease-out;
+  content: "x";
+  font-size: 22px;
+  color: #aaaaaa;
+  position: relative;
+  top: 0.5em;
+  left: 15.4em;
+  padding: 5px 12px 8px 12px;
+  width: 1.8em;
+  height: 1.8em;
+  text-align: center;
+  transition: all 420ms ease-out;
 }
 
 .button__close:hover::before,
 .button__close:focus::before {
-    background-color: rgba(9,30,66,.08);
-    border-radius: 100%;
-    cursor: pointer;
+  background-color: rgba(9, 30, 66, 0.08);
+  border-radius: 100%;
+  cursor: pointer;
 }
 
 .title {
-    position: relative;
-    width: 15.6rem;
-    height: 2.7rem;
-    line-height: 2.7rem;
-    margin-left: 2rem;
+  position: relative;
+  width: 15.6rem;
+  height: 2.7rem;
+  line-height: 2.7rem;
+  margin-left: 2rem;
 }
 
 .title__input {
-    width: 91%;
-    border: 0;
-    outline: 0;
-    padding: 0.35rem 0;
-    border-bottom: 2px solid var(--input-border);
-    box-shadow: none;
-    color: #111;
+  width: 91%;
+  border: 0;
+  outline: 0;
+  padding: 0.35rem 0;
+  border-bottom: 2px solid var(--input-border);
+  box-shadow: none;
+  color: #111;
 }
 
 .title__input:focus {
-    box-shadow: 0 4px 2px -2px  
-    hsla(
-        var(--input-focus-h),
-        var(--input-focus-s),
-        var(--input-focus-l),
-        0.8
-    );
-    
+  box-shadow: 0 4px 2px -2px hsla(var(--input-focus-h), var(--input-focus-s), var(--input-focus-l), 0.8);
 }
 
 .title__input:focus ~ .title__label {
-    top: -1.25rem;
+  top: -1.25rem;
 }
 
 .title__label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    color: black;
-    transition: 120ms all ease-in;
-    cursor: text;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: black;
+  transition: 120ms all ease-in;
+  cursor: text;
 }
 
 .description__input {
-    resize: none;
-    font-family: inherit;
-    font-size: max(16px, 1em);
-    padding: 0.5em 0.5em;
-    margin: 2.5rem 2rem 0 2rem;
-    background-color: #fff;
-    border: 2px solid var(--input-border);
-    border-radius: 4px;
-    width: 17.3rem;
-    height: 8rem;
-    background-color: #f4f7fa;
-    outline: none;
-    transition: 180ms all ease-in;
+  resize: none;
+  font-family: inherit;
+  font-size: max(16px, 1em);
+  padding: 0.5em 0.5em;
+  margin: 2.5rem 2rem 0 2rem;
+  background-color: #fff;
+  border: 2px solid var(--input-border);
+  border-radius: 4px;
+  width: 17.3rem;
+  height: 8rem;
+  background-color: #f4f7fa;
+  outline: none;
+  transition: 180ms all ease-in;
 }
 
 .description__input:focus {
-    box-shadow: 0 0 0 2px
-      hsla(
-        var(--input-focus-h),
-        var(--input-focus-s),
-        var(--input-focus-l),
-        0.8
-      );
+  box-shadow: 0 0 0 2px
+    hsla(var(--input-focus-h), var(--input-focus-s), var(--input-focus-l), 0.8);
 }
 
 .description__icon {
-    position: relative;
-    bottom: 8.1rem;
-    right: 19.5rem;
+  position: relative;
+  bottom: 8.1rem;
+  right: 19.5rem;
 }
 
 .description__label {
-    display: block;
-    font-weight: 500;
-    line-height: 1;
-    margin: 1.5rem 0.2rem 0 4rem;
-    position: absolute;
-    top: 8.9rem;
-    transition: 180ms all ease-in;
+  display: block;
+  font-weight: 500;
+  line-height: 1;
+  margin: 1.5rem 0.2rem 0 4rem;
+  position: absolute;
+  top: 8.9rem;
+  transition: 180ms all ease-in;
 }
 
 /* .textarea:focus ~ .description__label {
@@ -149,63 +136,58 @@
 } */
 
 .duedate {
-    margin-top: 0.3rem;
+  margin-top: 0.3rem;
 }
 
 .duedate__icon {
-    width: 26px;
-    height: 26px;
-    position: relative;
-    bottom: -0.5rem;
-    left: 2.1rem;
+  width: 26px;
+  height: 26px;
+  position: relative;
+  bottom: -0.5rem;
+  left: 2.1rem;
 }
 
 .duedate__label {
-    position: relative;
-    left: 2.1rem;
+  position: relative;
+  left: 2.1rem;
 }
 
 .duedate__input {
-    font-size: max(16px, 1em);
-    font-family: inherit;
-    padding: 0.25em 0.5em;
-    margin: 0.7rem 0 0 2.5rem;
-    background-color: #fff;
-    border: 2px solid var(--input-border);
-    border-radius: 4px;
-    outline: none;
-    transition: 180ms box-shadow ease-in;
+  font-size: max(16px, 1em);
+  font-family: inherit;
+  padding: 0.25em 0.5em;
+  margin: 0.7rem 0 0 2.5rem;
+  background-color: #fff;
+  border: 2px solid var(--input-border);
+  border-radius: 4px;
+  outline: none;
+  transition: 180ms box-shadow ease-in;
 }
 
 .duedate__input:focus {
-    box-shadow: 0 0 0 2px
-    hsla(
-      var(--input-focus-h),
-      var(--input-focus-s),
-      var(--input-focus-l),
-      0.8
-    );
+  box-shadow: 0 0 0 2px
+    hsla(var(--input-focus-h), var(--input-focus-s), var(--input-focus-l), 0.8);
 }
 
 #duedate__checkbox {
-    vertical-align: middle;
-    outline: none;
+  vertical-align: middle;
+  outline: none;
 }
 
 .button__save {
-    margin: 1rem 0 0 8.5rem;
-    padding: 0.5rem 1.8rem;
+  margin: 1rem 0 0 8.5rem;
+  padding: 0.5rem 1.8rem;
 }
 
 .button__delete {
-    display: none;
-    margin: 0;
-    padding: 0.5rem 1rem;
+  display: none;
+  margin: 0;
+  padding: 0.5rem 1rem;
 }
 
 /* Utility classes. */
 .has-content {
-    top: -1.25rem;
+  top: -1.25rem;
 }
 
 /* 
@@ -213,61 +195,60 @@
  * In mobile .button__save overrides this margin and aligns it.
 */
 .align-btns {
-    margin: 1rem 0 0 4.5rem;
+  margin: 1rem 0 0 4.5rem;
 }
 
 @media all and (max-width: 37.5rem) {
-    
-    .modal__content {
-        width: 21rem;
-    }
+  .modal__content {
+    width: 21rem;
+  }
 
-    .button__close::before {
-        left: 11em;
-    }
+  .button__close::before {
+    left: 11em;
+  }
 
-    .description__input {
-        width: 14.3rem;
-    }
+  .description__input {
+    width: 14.3rem;
+  }
 
-    .description__icon {
-        right: 16.7rem;
-    }
+  .description__icon {
+    right: 16.7rem;
+  }
 
-    .description__label {
-        top: 9.1rem;
-    }
+  .description__label {
+    top: 9.1rem;
+  }
 
-    /* description__input:focus ~ .description__label {
+  /* description__input:focus ~ .description__label {
         top: 8.6rem;
     } */
-    
-    .duedate__icon {
-        left: 1.9rem;
-    }
 
-    .duedate__label {
-        left: 1.8rem;
-    }
+  .duedate__icon {
+    left: 1.9rem;
+  }
 
-    .duedate__input {
-        margin: 0.7rem 0 0 1.9rem;
-        width: 45%;
-        font-size: 15px;
-    }
+  .duedate__label {
+    left: 1.8rem;
+  }
 
-    .error {
-        margin: 1rem 0 0 2.5rem;
-    }
+  .duedate__input {
+    margin: 0.7rem 0 0 1.9rem;
+    width: 45%;
+    font-size: 15px;
+  }
 
-    .button__save {
-        margin: 0.5rem 0 0 2.5rem;
-    }
+  .error {
+    margin: 1rem 0 0 2.5rem;
+  }
 
-    /* Utility Classes */
+  .button__save {
+    margin: 0.5rem 0 0 2.5rem;
+  }
 
-    /* This one is used to align the button when it's alone. */
-    .button__save-align {
-        margin: 1rem 0 0 7rem;
-    }
+  /* Utility Classes */
+
+  /* This one is used to align the button when it's alone. */
+  .button__save-align {
+    margin: 1rem 0 0 7rem;
+  }
 }

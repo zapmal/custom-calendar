@@ -2,7 +2,7 @@
     "name": "calendar",
     "version": "1.0.0",
     "description": "",
-    "main": "src/scripts/Calendar.js",
+    "main": "src/js/Calendar.js",
     "scripts": {
         "serve": "webpack serve",
         "c:prod": "webpack --mode=production",
