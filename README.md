@@ -2,7 +2,7 @@
 
 - ### About the versions
    - branch `main` has the JavaScript version.
-   - branch `ts-calendar` **will** contain the TypeScript version.
+   - Link to the TypeScript version: https://github.com/Zondazx/custom-calendar-ts
 
 - ### Installation
    - Clone the repository:  `git clone https://github.com/Zondazx/custom-calendar`
