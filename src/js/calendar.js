@@ -62,17 +62,6 @@ const renderCalendar = (year = INITIAL_YEAR, month = INITIAL_MONTH) => {
 const initMonthSelector = () => {
   let selectedMonth = dayjs(new Date(INITIAL_YEAR, INITIAL_MONTH - 1, 1));
 
-  document.addEventListener("keydown", e => {
-    if (e.code === "ArrowLeft") {
-      selectedMonth = dayjs(selectedMonth).subtract(1, "month");
-      renderCalendar(selectedMonth.format("YYYY"), selectedMonth.format("M"));
-    }
-    if (e.code === "ArrowRight") {
-      selectedMonth = dayjs(selectedMonth).add(1, "month");
-      renderCalendar(selectedMonth.format("YYYY"), selectedMonth.format("M"));
-    }
-  });
-
   const previousMonthSelector = document.getElementById("previous-month-selector");
   previousMonthSelector.addEventListener("click", () => {
     selectedMonth = dayjs(selectedMonth).subtract(1, "month");
@@ -184,13 +173,16 @@ export const getStoredEventsDates = () => {
 
 /** 
  * Initialization of app.
-*/
+ */
 WEEKDAYS.forEach(weekday => {
   const weekdayElement = document.createElement("li");
   daysOfWeek.appendChild(weekdayElement);
   weekdayElement.innerText = weekday;
 });
 
+/**  
+ * Methods that I need to call in index.ts
+ */
 renderCalendar();
 initMonthSelector();
 handleDayClick();

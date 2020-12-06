@@ -51,7 +51,6 @@ export const handleDayClick = () => {
 
 const displayEventData = day => {
   const events = getStoredEvents();
-
   events.forEach(event => {
     if (event.id === day) {
       title.value = event.title;
