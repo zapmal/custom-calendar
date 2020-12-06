@@ -1,6 +1,8 @@
 ## Calendar 
 
 > TypeScript version -> WIP.
+
+Icons from [icons8](https://icons8.com/)
 - ### Installation
    - Clone the repository:  `git clone https://github.com/Zondazx/custom-calendar`
    - Enter in the directory: `cd custom-calendar`
